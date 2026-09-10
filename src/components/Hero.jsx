@@ -2,6 +2,7 @@ import { Component, lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useMediaQuery from '../hooks/useMediaQuery'
 import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion'
+import { assetPath } from '../lib/assetPath.js'
 import './Hero.css'
 
 const Scene3D = lazy(() => import('./Scene3D'))
@@ -35,13 +36,13 @@ function FallbackScene() {
   return (
     <div className="hero-fallback" aria-hidden="true">
       <article className="float-card">
-        <img src="/images/wai-wai.jpg" alt="" />
+        <img src={assetPath('/images/wai-wai.jpg')} alt="" />
       </article>
       <article className="float-card">
-        <img src="/images/milk.jpg" alt="" />
+        <img src={assetPath('/images/milk.jpg')} alt="" />
       </article>
       <article className="float-card">
-        <img src="/images/bread.jpg" alt="" />
+        <img src={assetPath('/images/bread.jpg')} alt="" />
       </article>
     </div>
   )
@@ -110,7 +111,7 @@ export default function Hero() {
           {photoOk && (
             <img
               className="hero-produce"
-              src="/images/hero-produce.jpg"
+              src={assetPath('/images/hero-produce.jpg')}
               alt="Fresh vegetables arranged on a slate table"
               onError={() => setPhotoOk(false)}
             />
