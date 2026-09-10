@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { assetPath } from '../lib/assetPath.js'
 
 function upsertMeta(attr, key, content) {
   if (!content) return
@@ -20,6 +21,7 @@ export default function Seo({
   jsonLd,
 }) {
   const ld = jsonLd ? JSON.stringify(jsonLd) : ''
+  const resolvedImage = assetPath(image)
 
   useEffect(() => {
     const prev = document.title
@@ -28,11 +30,11 @@ export default function Seo({
     upsertMeta('property', 'og:title', title)
     upsertMeta('property', 'og:description', description)
     upsertMeta('property', 'og:type', type)
-    upsertMeta('property', 'og:image', image)
+    upsertMeta('property', 'og:image', resolvedImage)
     upsertMeta('name', 'twitter:card', 'summary_large_image')
     upsertMeta('name', 'twitter:title', title)
     upsertMeta('name', 'twitter:description', description)
-    if (image) upsertMeta('name', 'twitter:image', image)
+    if (resolvedImage) upsertMeta('name', 'twitter:image', resolvedImage)
 
     let link = document.head.querySelector('link[rel="canonical"]')
     if (path) {
@@ -58,7 +60,7 @@ export default function Seo({
       document.title = prev
       script?.remove()
     }
-  }, [title, description, path, image, type, ld])
+  }, [title, description, path, resolvedImage, type, ld])
 
   return null
 }
