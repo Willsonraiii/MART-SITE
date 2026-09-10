@@ -1,0 +1,102 @@
+.veg {
+  background:
+    radial-gradient(800px 400px at 10% 0%, rgba(61, 138, 88, 0.25), transparent 50%),
+    var(--forest);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.veg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 18c8 4 12 12 8 20-8-2-12-8-8-20Z' fill='%23ffffff' opacity='.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.veg .section-head h2,
+.veg .eyebrow {
+  color: var(--cream);
+}
+
+.veg .lede {
+  color: color-mix(in srgb, var(--cream) 75%, transparent);
+}
+
+.veg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  position: relative;
+}
+
+.veg-card {
+  background: color-mix(in srgb, var(--paper) 96%, white);
+  color: var(--ink);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.veg-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 40px -24px rgba(0, 0, 0, 0.45);
+}
+
+.veg-media {
+  background: #f3ece0;
+  aspect-ratio: 1.05;
+  position: relative;
+}
+
+.veg-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.veg-card .badge-sale {
+  top: 10px;
+  left: 10px;
+}
+
+.veg-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.veg-body h3 {
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+}
+
+.veg-note {
+  color: var(--ink-3);
+  font-size: 0.8rem;
+}
+
+.veg-body .btn {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 10px;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 960px) {
+  .veg-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .veg-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

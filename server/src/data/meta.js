@@ -1,0 +1,47 @@
+export const categoryMeta = [
+  { id: 'noodles', name: 'Instant Noodles', tone: 'coral' },
+  { id: 'vegetables', name: 'Vegetables', tone: 'leaf' },
+  { id: 'fruits', name: 'Fruits', tone: 'rose' },
+  { id: 'dairy', name: 'Dairy', tone: 'sky' },
+  { id: 'bakery', name: 'Bakery', tone: 'wheat' },
+  { id: 'snacks', name: 'Snacks', tone: 'sun' },
+  { id: 'tea', name: 'Tea & Coffee', tone: 'mocha' },
+  { id: 'beverages', name: 'Beverages', tone: 'teal' },
+  { id: 'groceries', name: 'Groceries', tone: 'olive' },
+  { id: 'care', name: 'Personal Care', tone: 'lilac' },
+  { id: 'household', name: 'Household', tone: 'slate' },
+  { id: 'chocolates', name: 'Chocolates', tone: 'cocoa' },
+]
+
+export const offerSeed = [
+  {
+    id: 'deal-noodles',
+    kicker: "Today's Deal",
+    title: 'Instant Noodles',
+    tag: '20% OFF',
+    detail: 'Wai Wai, Rara and every pack on the rack. Stock up for the week.',
+    cta: 'Shop noodles',
+    to: '/shop?category=noodles&discounted=1',
+    theme: 'coral',
+  },
+  {
+    id: 'deal-snacks',
+    kicker: 'Weekend special',
+    title: 'Snacks',
+    tag: 'Buy 2 Get 1',
+    detail: 'Chips, biscuits and namkeen — mix any three, pay for two.',
+    cta: 'Grab snacks',
+    to: '/shop?category=snacks',
+    theme: 'gold',
+  },
+  {
+    id: 'deal-oil',
+    kicker: 'Kitchen essential',
+    title: 'Cooking Oil',
+    tag: '10% OFF',
+    detail: 'Mustard and sunflower, 1 litre bottles. Honest pantry prices.',
+    cta: 'Shop oil',
+    to: '/shop?category=groceries&q=oil',
+    theme: 'leaf',
+  },
+]

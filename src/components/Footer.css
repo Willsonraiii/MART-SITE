@@ -1,0 +1,100 @@
+.site-footer {
+  background: #0e2419;
+  color: color-mix(in srgb, var(--cream) 86%, white);
+  padding: 64px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1.1fr;
+  gap: 36px;
+}
+
+.footer-brand p {
+  margin-top: 14px;
+  max-width: 36ch;
+  color: color-mix(in srgb, var(--cream) 70%, transparent);
+}
+
+.site-footer .logo {
+  color: var(--cream);
+}
+
+.site-footer .logo-sub {
+  color: color-mix(in srgb, var(--cream) 55%, transparent);
+}
+
+.site-footer h3 {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--gold-soft);
+}
+
+.site-footer a {
+  display: block;
+  padding: 4px 0;
+  color: color-mix(in srgb, var(--cream) 78%, transparent);
+  transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: var(--cream);
+}
+
+.footer-contact p {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: color-mix(in srgb, var(--cream) 78%, transparent);
+}
+
+.hours {
+  margin-top: 12px;
+  display: grid;
+  gap: 4px;
+  font-size: 0.92rem;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--cream) 22%, transparent);
+  border-radius: 50%;
+  padding: 0;
+}
+
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 18px;
+  border-top: 1px solid color-mix(in srgb, var(--cream) 12%, transparent);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: color-mix(in srgb, var(--cream) 55%, transparent);
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
