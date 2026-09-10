@@ -11,7 +11,7 @@ import { CatalogProvider } from './context/CatalogContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
-      <BrowserRouter>
+      <BrowserRouter basename="/MART-SITE">
         <CatalogProvider>
           <AuthProvider>
             <CartProvider>
